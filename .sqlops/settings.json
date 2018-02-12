@@ -1,0 +1,74 @@
+{
+    "dashboard.server.widgets": [
+        {
+            "name": "Wait Counts",
+            "widget":{
+                "extension-wait-counts-by-Paul-Randal":{}
+            },
+            "gridItemConfig":{
+                "sizex":2,
+                "sizey":1
+            }
+        },
+        {
+            "name": "Database Space Usage",
+            "widget":{
+                "extension-dbspace-usage":{}
+            },
+            "gridItemConfig":{
+                "sizex":2,
+                "sizey":1
+            }
+        },
+        {
+            "name": "Backup Size Growth",
+            "widget": {
+                "extension-backup-growth-trend":{}
+            },
+            "gridItemConfig":{
+             "sizex":2,
+             "sizey":1
+
+            }
+        },
+        {
+            "name": "Database Memory Usage",
+            "widget": {
+                "extension-dbbuffer-usage":{}
+            },
+            "gridItemConfig":{
+                "sizex":2,
+                "sizey":1
+            }
+        },
+        {
+            "name": "CPU Utilization",
+            "widget":{
+                "extension-cpu-utilization":{}   
+            },
+            "gridItemConfig":{
+                "sizex":2,
+                "sizey":1            
+            }
+        },
+        {
+            "name": "Tasks",
+            "widget": {
+                "tasks-widget": {}
+            },
+            "gridItemConfig": {
+                "sizex": 1,
+                "sizey": 1
+            }
+        },
+        {
+            "gridItemConfig": {
+                "sizex": 1,
+                "sizey": 1
+            },
+            "widget": {
+                "explorer-widget": {}
+            }
+        }
+    ]
+}
