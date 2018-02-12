@@ -1,0 +1,57 @@
+{
+    "name": "mssql-db-insight-widget",
+    "version": "0.1.0",
+    "publisher": "erickang",
+    "engines": {
+        "vscode": "*"
+    },
+    "contributes": {
+        "insights": [
+            {
+                "id": "table-space-db-insight",
+                "contrib": {
+                    "type": {
+                        "horizontalBar": {
+                            "dataDirection": "vertical",
+                            "dataType": "number",
+                            "legendPosition": "none",
+                            "labelFirstColumn": false,
+                            "columnsAsLabels": false
+                        }
+                    },
+                    "queryFile": "./sql/tablespace.sql"
+                }
+            },
+            {
+                "id": "disk-usage-db-insight",
+                "contrib": {
+                    "type": {
+                        "doughnut": {
+                            "dataDirection": "horizontal",
+                            "dataType": "number",
+                            "legendPosition": "top",
+                            "labelFirstColumn": false,
+                            "columnsAsLabels": false
+                        }
+                    },
+                    "queryFile": "./sql/diskusage.sql"
+                }
+            },
+            {
+                "id": "data-file-space-db-insight",
+                "contrib": {
+                    "type": {
+                        "doughnut": {
+                            "dataDirection": "horizontal",
+                            "dataType": "number",
+                            "legendPosition": "top",
+                            "labelFirstColumn": false,
+                            "columnsAsLabels": false
+                        }
+                    },
+                    "queryFile": "./sql/data_file_space.sql"
+                }
+            }
+        ]
+    }
+}

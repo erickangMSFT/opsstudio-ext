@@ -1,0 +1,152 @@
+{
+    "name": "sqlopsstudio-server-insight-widget",
+    "version": "0.1.0",
+    "publisher": "erickang",
+    "engines": {
+        "vscode": "*"
+    },
+    "contributes": {
+        "insights": [
+            {
+                "id": "all_database_used_space",
+                "contrib": {
+                    "type": {
+                        "horizontalBar": {
+                            "dataDirection": "vertical",
+                            "dataType": "number",
+                            "legendPosition": "none",
+                            "labelFirstColumn": false
+                        }
+                    },
+                    "queryFile": "./sql/all_db_space_used.sql"
+                }
+            },
+            {
+                "id": "all_database_size",
+                "contrib": {
+                    "type": {
+                        "horizontalBar": {
+                            "dataDirection": "vertical",
+                            "dataType": "number",
+                            "legendPosition": "none",
+                            "labelFirstColumn": true
+                        }
+                    },
+                    "queryFile": "./sql/db_size.sql"
+                }
+            },
+            {
+                "id": "cpu-utilization-server-insight",
+                "contrib": {
+                    "type": {
+                        "timeSeries": {
+                            "legendPosition": "none",
+                            "labelFirstColumn": false,
+                            "dataType": "point"
+                        }
+                    },
+                    "queryFile": "./sql/cpumetric.sql"
+                }
+            },
+            {
+                "id": "backup-growth-trend-server-insight",
+                "details": "Abbie wants it",
+                "contrib": {
+                    "type": {
+                        "timeSeries": {
+                            "legendPosition": "none",
+                            "labelFirstColumn": true,
+                            "dataType": "point",
+                            "dataDirection": "vertical"
+                        }
+                    },
+                    "queryFile": "./sql/backup_size_trend.sql"
+                }
+            },
+            {
+                "id": "backup-history-server-insight",
+                "contrib": {
+                    "type": {
+                        "count": null
+                    },
+                    "queryFile": "./sql/backup_insight.sql",
+                    "details": {
+                        "queryFile": "./sql/backup_detail.sql",
+                        "label": {
+                            "icon": "database",
+                            "column": "Database",
+                            "state": [
+                                {
+                                    "condition": {
+                                        "if": "equals",
+                                        "equals": "0"
+                                    },
+                                    "color": "red"
+                                },
+                                {
+                                    "condition": {
+                                        "if": "equals",
+                                        "equals": "1"
+                                    },
+                                    "color": "orange"
+                                },
+                                {
+                                    "condition": {
+                                        "if": "equals",
+                                        "equals": "2"
+                                    },
+                                    "color": "green"
+                                }
+                            ]
+                        },
+                        "value": "Backup_Health",
+                        "actions": {
+                            "types": [
+                                "backup"
+                            ],
+                            "database": "${Database}"
+                        }
+                    }
+                }
+            },
+            {
+                "id": "Wait-counts-by-Paul-Randal-server-insight",
+                "contrib": {
+                    "type": {
+                        "horizontalBar": {
+                            "dataDirection": "vertical",
+                            "dataType": "number",
+                            "legendPosition": "none",
+                            "labelFirstColumn": false,
+                            "columnsAsLabels": false
+                        }
+                    },
+                    "queryFile": "./sql/waits_paul_randal.sql",
+                    "details": {
+                        "queryFile": "./sql/waits_detail_paul_randal.sql",
+                        "label": {
+                            "column": "WaitType",
+                            "state": []
+                        },
+                        "value": "Percentage"
+                    }
+                }
+            },
+            {
+                "id": "memory-usage-by-db-server-insight",
+                "contrib": {
+                    "type": {
+                        "horizontalBar": {
+                            "dataDirection": "vertical",
+                            "dataType": "number",
+                            "legendPosition": "none",
+                            "labelFirstColumn": false,
+                            "columnsAsLabels": false
+                        }
+                    },
+                    "queryFile": "./sql/memorybydb.sql"
+                }
+            }
+        ]
+    }
+}
