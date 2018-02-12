@@ -3,7 +3,7 @@
         {
             "name": "Wait Counts",
             "widget":{
-                "extension-wait-counts-by-Paul-Randal":{}
+                "extension-wait-counts-by-Paul-Randal":null
             },
             "gridItemConfig":{
                 "sizex":2,
@@ -13,7 +13,7 @@
         {
             "name": "Database Space Usage",
             "widget":{
-                "extension-dbspace-usage":{}
+                "extension-dbspace-usage":null
             },
             "gridItemConfig":{
                 "sizex":2,
@@ -23,7 +23,7 @@
         {
             "name": "Backup Size Growth",
             "widget": {
-                "extension-backup-growth-trend":{}
+                "extension-backup-growth-trend":null
             },
             "gridItemConfig":{
              "sizex":2,
@@ -34,7 +34,7 @@
         {
             "name": "Database Memory Usage",
             "widget": {
-                "extension-dbbuffer-usage":{}
+                "extension-dbbuffer-usage":null
             },
             "gridItemConfig":{
                 "sizex":2,
@@ -44,7 +44,7 @@
         {
             "name": "CPU Utilization",
             "widget":{
-                "extension-cpu-utilization":{}   
+                "extension-cpu-utilization":null
             },
             "gridItemConfig":{
                 "sizex":2,
