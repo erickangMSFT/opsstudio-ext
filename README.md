@@ -1,14 +1,20 @@
 # SQL Ops Studio Extension Sample
 This sample project demonstrates the extensibility of SQL Ops Studio. For the simplicity, this sample enables following:
-    1. Install various server insight sample widgets.
-    2. Automatically configure "dashboard.server.widget" settings in settings.json.
+    
+1. Install various server insight sample widgets.
+    
+2. Automatically configure "dashboard.server.widget" settings in settings.json.
 
 ## Key scenarios
-    1. Downloads and install insight-extension.vsix using install from VSIX functionality.
-    2. Connect to a sql server instance and open Server Dashboard.
-    3. Dashboard visualizes newly installed server insight widgets.
-    4. Browses installed insight widgets from Extension Manager.
-    5. Remove installed extension using Extension Manager.
+1. Downloads and install insight-extension.vsix using install from VSIX functionality.
+
+2. Connect to a sql server instance and open Server Dashboard.
+
+3. Dashboard visualizes newly installed server insight widgets.
+
+4. Browses installed insight widgets from Extension Manager.
+
+5. Remove installed extension using Extension Manager.
 
 ## Preparation 
 
