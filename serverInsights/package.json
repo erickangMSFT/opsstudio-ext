@@ -1,6 +1,6 @@
 {
-    "name": "sqlopsstudio-server-insight-widget",
-    "version": "0.1.0",
+    "name": "Insight-Extension",
+    "version": "0.2.0",
     "publisher": "erickang",
     "engines": {
         "vscode": "^1.20.0"

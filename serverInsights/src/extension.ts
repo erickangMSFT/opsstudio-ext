@@ -98,34 +98,4 @@ export function activate(context: vscode.ExtensionContext) {
 
 // this method is called when your extension is deactivated
 export function deactivate() {
-    let config = vscode.workspace.getConfiguration('dashboard.server');
-    let original = [
-        {
-            "widget": {
-                "backup-history-server-insight": {
-                    "cacheId": "0c7cba8b-c87a-4bcc-ae54-2f40a5503a90"
-                }
-            }
-        },
-        {
-            "name": "Tasks",
-            "widget": {
-                "tasks-widget": {}
-            },
-            "gridItemConfig": {
-                "sizex": 1,
-                "sizey": 1
-            }
-        },
-        {
-            "gridItemConfig": {
-                "sizex": 1,
-                "sizey": 1
-            },
-            "widget": {
-                "explorer-widget": {}
-            }
-        }
-    ];
-    config.update('widgets', original, vscode.ConfigurationTarget.Global)
 }
